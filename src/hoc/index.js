@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component
-const SimpleComponent = (props, context) => (
+const SimpleComponentForHoC = (props, context) => (
   <div className={context.theme}>
     BOT
   </div>
@@ -21,14 +21,12 @@ const Enhance = ComposedComponent => class extends React.Component {
   }
 };
 
-// HoC
-const HoC = Enhance(SimpleComponent);
-
 // Perf
 class Perf extends React.Component {
   render() {
     let items = []
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 1; i++) {
+      const HoC = Enhance(SimpleComponentForHoC);
       items.push(<HoC key={i} />);
     }
 
