@@ -25,7 +25,7 @@ const Enhance = ComposedComponent => class extends React.Component {
 class Perf extends React.Component {
   render() {
     let items = []
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 1000; i++) {
       const HoC = Enhance(SimpleComponentForHoC);
       items.push(<HoC key={i} />);
     }
