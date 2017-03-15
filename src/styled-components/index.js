@@ -13,7 +13,6 @@ const StyledComponent = ({index}) => (
   </Tag>
 );
 
-
 // Perf
 class Perf extends React.Component {
   render() {
